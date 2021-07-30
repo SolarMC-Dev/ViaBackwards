@@ -4,16 +4,18 @@ plugins {
 }
 
 allprojects {
-    group = "com.viaversion"
+    group = "gg.solarmc.viaversion" // Solar
     version = "4.0.2-SNAPSHOT"
     description = "Allow older clients to join newer server versions."
 }
 
 val platforms = setOf(
         projects.viabackwardsBukkit,
+/* Solar start
         projects.viabackwardsBungee,
         projects.viabackwardsFabric,
         projects.viabackwardsSponge,
+*/ // Solar end
         projects.viabackwardsVelocity
 ).map { it.dependencyProject }
 

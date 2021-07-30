@@ -18,10 +18,10 @@
 package com.viaversion.viabackwards.protocol.protocol1_11_1to1_12.packets;
 
 import com.viaversion.viaversion.api.connection.UserConnection;
-import com.viaversion.viaversion.libs.gson.JsonArray;
-import com.viaversion.viaversion.libs.gson.JsonElement;
-import com.viaversion.viaversion.libs.gson.JsonObject;
-import com.viaversion.viaversion.libs.gson.JsonPrimitive;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonPrimitive;
 
 public class ChatItemRewriter {
 

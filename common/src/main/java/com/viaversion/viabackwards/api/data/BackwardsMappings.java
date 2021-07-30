@@ -24,8 +24,8 @@ import com.viaversion.viaversion.api.Via;
 import com.viaversion.viaversion.api.data.MappingDataBase;
 import com.viaversion.viaversion.api.data.Mappings;
 import com.viaversion.viaversion.api.protocol.Protocol;
-import com.viaversion.viaversion.libs.fastutil.ints.Int2ObjectMap;
-import com.viaversion.viaversion.libs.gson.JsonObject;
+import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
+import com.google.gson.JsonObject;
 import org.checkerframework.checker.nullness.qual.Nullable;
 
 import java.util.Map;

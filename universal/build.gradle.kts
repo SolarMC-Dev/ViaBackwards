@@ -6,9 +6,11 @@ plugins {
 
 val platforms = setOf(
         projects.viabackwardsBukkit,
+/* Solar start
         projects.viabackwardsBungee,
         projects.viabackwardsFabric,
         projects.viabackwardsSponge,
+*/ // Solar end
         projects.viabackwardsVelocity
 ).map { it.dependencyProject }
 

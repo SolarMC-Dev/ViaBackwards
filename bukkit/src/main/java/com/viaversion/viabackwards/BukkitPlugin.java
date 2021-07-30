@@ -21,7 +21,7 @@ package com.viaversion.viabackwards;
 import com.viaversion.viabackwards.api.ViaBackwardsPlatform;
 import com.viaversion.viabackwards.listener.FireDamageListener;
 import com.viaversion.viabackwards.listener.FireExtinguishListener;
-import com.viaversion.viabackwards.listener.LecternInteractListener;
+//import com.viaversion.viabackwards.listener.LecternInteractListener; // Solar
 import com.viaversion.viaversion.ViaVersionPlugin;
 import com.viaversion.viaversion.api.Via;
 import com.viaversion.viaversion.api.protocol.version.ProtocolVersion;
@@ -56,7 +56,10 @@ public class BukkitPlugin extends JavaPlugin implements ViaBackwardsPlatform {
             loader.storeListener(new FireExtinguishListener(this)).register();
         }
         if (protocolVersion >= ProtocolVersion.v1_14.getVersion()) {
+/* Solar start
             loader.storeListener(new LecternInteractListener(this)).register();
+            */ throw new IllegalStateException("Please update to compile against 1.14");
+// Solar end
         }
         if (protocolVersion >= ProtocolVersion.v1_12.getVersion()) {
             loader.storeListener(new FireDamageListener(this)).register();

@@ -17,8 +17,8 @@
  */
 package com.viaversion.viabackwards.protocol.protocol1_12_2to1_13.data;
 
-import com.viaversion.viaversion.libs.fastutil.ints.Int2IntMap;
-import com.viaversion.viaversion.libs.fastutil.ints.Int2IntOpenHashMap;
+import it.unimi.dsi.fastutil.ints.Int2IntMap;
+import it.unimi.dsi.fastutil.ints.Int2IntOpenHashMap;
 import com.viaversion.viaversion.protocols.protocol1_13to1_12_2.data.EntityTypeRewriter;
 
 import java.lang.reflect.Field;

@@ -24,8 +24,8 @@ import com.viaversion.viaversion.api.protocol.packet.ClientboundPacketType;
 import com.viaversion.viaversion.api.protocol.packet.State;
 import com.viaversion.viaversion.api.protocol.remapper.PacketRemapper;
 import com.viaversion.viaversion.api.type.Type;
-import com.viaversion.viaversion.libs.gson.JsonElement;
-import com.viaversion.viaversion.libs.gson.JsonObject;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 import com.viaversion.viaversion.rewriter.ComponentRewriter;
 
 import java.util.HashMap;

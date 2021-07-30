@@ -8,7 +8,7 @@ blossom {
 }
 
 dependencies {
-    compileOnlyApi(libs.viaver)
+    compileOnlyApi(libs.viaverCommon) // Solar
     compileOnlyApi(libs.netty)
     compileOnlyApi(libs.guava)
     compileOnlyApi(libs.checkerQual)

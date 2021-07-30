@@ -18,8 +18,8 @@
 package com.viaversion.viabackwards.protocol.protocol1_16_4to1_17.storage;
 
 import com.viaversion.viaversion.api.connection.StorableObject;
-import com.viaversion.viaversion.libs.fastutil.ints.IntOpenHashSet;
-import com.viaversion.viaversion.libs.fastutil.ints.IntSet;
+import it.unimi.dsi.fastutil.ints.IntOpenHashSet;
+import it.unimi.dsi.fastutil.ints.IntSet;
 
 public final class PingRequests implements StorableObject {
     private final IntSet ids = new IntOpenHashSet();

@@ -24,6 +24,8 @@ tasks {
 publishShadowJar()
 
 fun ShadowJar.configureRelocations() {
+/* Solar start - disable
     relocate("com.google.gson", "com.viaversion.viaversion.libs.gson")
     relocate("it.unimi.dsi.fastutil", "com.viaversion.viaversion.libs.fastutil")
+*/ // Solar end
 }

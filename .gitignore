@@ -17,7 +17,7 @@ hs_err_pid*
 *.iml
 
 # Ignore IDEA directory
-.idea/*
+.idea/
 
 # Include the project's dictionary
 !.idea/dictionaries/

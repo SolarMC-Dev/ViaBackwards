@@ -20,8 +20,8 @@ package com.viaversion.viabackwards.protocol.protocol1_12_2to1_13.block_entity_h
 
 import com.viaversion.viabackwards.protocol.protocol1_12_2to1_13.providers.BackwardsBlockEntityProvider;
 import com.viaversion.viaversion.api.connection.UserConnection;
-import com.viaversion.viaversion.libs.fastutil.ints.Int2ObjectMap;
-import com.viaversion.viaversion.libs.fastutil.ints.Int2ObjectOpenHashMap;
+import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
+import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import com.viaversion.viaversion.libs.opennbt.tag.builtin.CompoundTag;
 import com.viaversion.viaversion.libs.opennbt.tag.builtin.IntTag;
 import com.viaversion.viaversion.libs.opennbt.tag.builtin.StringTag;
@@ -29,7 +29,7 @@ import com.viaversion.viaversion.util.Pair;
 
 public class FlowerPotHandler implements BackwardsBlockEntityProvider.BackwardsBlockEntityHandler {
 
-    private static final Int2ObjectMap<Pair<String, Byte>> FLOWERS = new Int2ObjectOpenHashMap<>(22, 1F);
+    private static final Int2ObjectMap<Pair<String, Byte>> FLOWERS = new Int2ObjectOpenHashMap<>(22 + 1, 0.999F); // Solar - load factor
     private static final Pair<String, Byte> AIR = new Pair<>("minecraft:air", (byte) 0);
 
     static {

@@ -23,8 +23,8 @@ import com.viaversion.viabackwards.protocol.protocol1_11_1to1_12.data.Advancemen
 import com.viaversion.viaversion.api.protocol.remapper.PacketRemapper;
 import com.viaversion.viaversion.api.rewriter.RewriterBase;
 import com.viaversion.viaversion.api.type.Type;
-import com.viaversion.viaversion.libs.gson.JsonElement;
-import com.viaversion.viaversion.libs.gson.JsonObject;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 import com.viaversion.viaversion.protocols.protocol1_12to1_11_1.ClientboundPackets1_12;
 import com.viaversion.viaversion.rewriter.ComponentRewriter;
 

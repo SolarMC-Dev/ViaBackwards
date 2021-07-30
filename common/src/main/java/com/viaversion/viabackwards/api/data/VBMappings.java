@@ -18,8 +18,8 @@
 package com.viaversion.viabackwards.api.data;
 
 import com.viaversion.viaversion.api.data.IntArrayMappings;
-import com.viaversion.viaversion.libs.gson.JsonArray;
-import com.viaversion.viaversion.libs.gson.JsonObject;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 
 import java.util.Arrays;
 

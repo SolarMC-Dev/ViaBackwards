@@ -5,13 +5,15 @@ rootProject.name = "viabackwards-parent"
 
 dependencyResolutionManagement {
     repositories {
-        mavenLocal()
+// Solar start
         maven("https://repo.viaversion.com")
-        maven("https://papermc.io/repo/repository/maven-public/")
-        maven("https://oss.sonatype.org/content/repositories/snapshots/")
-        maven("https://nexus.velocitypowered.com/repository/velocity-artifacts-snapshots/")
-        maven("https://repo.spongepowered.org/maven")
+        maven("https://nexus.velocitypowered.com/repository/maven-public")
         mavenCentral()
+        maven("https://mvn-repo.solarmc.gg/releases")
+        maven("https://mvn-repo.solarmc.gg/snapshots")
+        maven("https://mvn-repo.arim.space/lesser-gpl3")
+        maven("https://mvn-repo.arim.space/gpl3")
+// Solar end
     }
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
 }
@@ -25,12 +27,14 @@ pluginManagement {
 
 includeBuild("build-logic")
 
+// Solar start
 setupViaSubproject("common")
 setupViaSubproject("bukkit")
-setupViaSubproject("bungee")
+//setupViaSubproject("bungee")
 setupViaSubproject("velocity")
-setupViaSubproject("sponge")
-setupViaSubproject("fabric")
+//setupViaSubproject("sponge")
+//setupViaSubproject("fabric")
+// Solar end
 
 setupSubproject("viabackwards") {
     projectDir = file("universal")

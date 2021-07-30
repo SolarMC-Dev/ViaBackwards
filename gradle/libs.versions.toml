@@ -3,16 +3,17 @@ metadata.format.version = "1.0"
 [versions]
 
 # ViaVersion
-viaver = "4.0.1"
+viaver = "4.0.2-SNAPSHOT"
 
 # Common provided
-netty = "4.0.20.Final"
-guava = "17.0"
-log4j = "2.8.1"
+netty = "4.1.24.Final"
+guava = "30.1.1-jre"
+log4j = "2.14.1"
 
 checkerQual = "3.14.0"
 
 # Platforms
+solarpaper = "1.2.0"
 paper = "1.16.5-R0.1-SNAPSHOT"
 bungee = "1.16-R0.5-SNAPSHOT"
 sponge = "5.0.0"
@@ -22,7 +23,9 @@ fabricLoader = "0.11.6"
 
 [libraries]
 
-viaver = { group = "com.viaversion", name = "viaversion", version.ref = "viaver" }
+viaverCommon = { group = "gg.solarmc.viaversion", name = "viaversion-common", version.ref = "viaver" }
+viaverBukkit = { group = "gg.solarmc.viaversion", name = "viaversion-bukkit", version.ref = "viaver" }
+viaverVelocity = { group = "gg.solarmc.viaversion", name = "viaversion-velocity", version.ref = "viaver" }
 
 netty = { group = "io.netty", name = "netty-all", version.ref = "netty" }
 guava = { group = "com.google.guava", name = "guava", version.ref = "guava" }
@@ -30,7 +33,7 @@ log4j = { group = "org.apache.logging.log4j", name = "log4j-api", version.ref = 
 
 checkerQual = { group = "org.checkerframework", name = "checker-qual", version.ref = "checkerQual" }
 
-paper = { group = "com.destroystokyo.paper", name = "paper-api", version.ref = "paper" }
+paper = { group = "gg.solarmc.paper", name = "solarpaper-api", version.ref = "solarpaper" }
 bungee = { group = "net.md-5", name = "bungeecord-api", version.ref = "bungee" }
 sponge = { group = "org.spongepowered", name = "spongeapi", version.ref = "sponge" }
 velocity = { group = "com.velocitypowered", name = "velocity-api", version.ref = "velocity" }

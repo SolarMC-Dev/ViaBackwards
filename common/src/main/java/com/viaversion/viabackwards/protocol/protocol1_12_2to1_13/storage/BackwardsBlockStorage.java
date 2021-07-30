@@ -20,15 +20,15 @@ package com.viaversion.viabackwards.protocol.protocol1_12_2to1_13.storage;
 
 import com.viaversion.viaversion.api.connection.StorableObject;
 import com.viaversion.viaversion.api.minecraft.Position;
-import com.viaversion.viaversion.libs.fastutil.ints.IntOpenHashSet;
-import com.viaversion.viaversion.libs.fastutil.ints.IntSet;
+import it.unimi.dsi.fastutil.ints.IntOpenHashSet;
+import it.unimi.dsi.fastutil.ints.IntSet;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class BackwardsBlockStorage implements StorableObject {
     // This BlockStorage is very exclusive (;
-    private static final IntSet WHITELIST = new IntOpenHashSet(779);
+    private static final IntSet WHITELIST = new IntOpenHashSet(779 + 1, 0.999F); // Solar - load factor
 
     static {
         // Flower pots

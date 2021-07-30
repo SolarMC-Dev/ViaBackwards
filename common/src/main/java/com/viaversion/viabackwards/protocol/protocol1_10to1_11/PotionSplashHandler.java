@@ -17,12 +17,12 @@
  */
 package com.viaversion.viabackwards.protocol.protocol1_10to1_11;
 
-import com.viaversion.viaversion.libs.fastutil.ints.Int2IntMap;
-import com.viaversion.viaversion.libs.fastutil.ints.Int2IntOpenHashMap;
+import it.unimi.dsi.fastutil.ints.Int2IntMap;
+import it.unimi.dsi.fastutil.ints.Int2IntOpenHashMap;
 
 public class PotionSplashHandler {
 
-    private static final Int2IntMap DATA = new Int2IntOpenHashMap(14, 1F);
+    private static final Int2IntMap DATA = new Int2IntOpenHashMap(14 + 1, 0.999F); // Solar - load factor
 
     static {
         DATA.defaultReturnValue(-1);

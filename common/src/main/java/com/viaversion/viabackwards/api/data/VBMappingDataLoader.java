@@ -20,14 +20,14 @@ package com.viaversion.viabackwards.api.data;
 import com.viaversion.viabackwards.ViaBackwards;
 import com.viaversion.viaversion.api.Via;
 import com.viaversion.viaversion.api.data.MappingDataLoader;
-import com.viaversion.viaversion.libs.fastutil.ints.Int2ObjectMap;
-import com.viaversion.viaversion.libs.fastutil.ints.Int2ObjectOpenHashMap;
-import com.viaversion.viaversion.libs.fastutil.objects.Object2IntMap;
-import com.viaversion.viaversion.libs.gson.JsonElement;
-import com.viaversion.viaversion.libs.gson.JsonIOException;
-import com.viaversion.viaversion.libs.gson.JsonObject;
-import com.viaversion.viaversion.libs.gson.JsonPrimitive;
-import com.viaversion.viaversion.libs.gson.JsonSyntaxException;
+import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
+import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
+import it.unimi.dsi.fastutil.objects.Object2IntMap;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonIOException;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonPrimitive;
+import com.google.gson.JsonSyntaxException;
 import com.viaversion.viaversion.util.GsonUtil;
 
 import java.io.File;
@@ -134,7 +134,7 @@ public class VBMappingDataLoader {
     }
 
     public static Int2ObjectMap<MappedItem> loadItemMappings(JsonObject oldMapping, JsonObject newMapping, JsonObject diffMapping, boolean warnOnMissing) {
-        Int2ObjectMap<MappedItem> itemMapping = new Int2ObjectOpenHashMap<>(diffMapping.size(), 1F);
+        Int2ObjectMap<MappedItem> itemMapping = new Int2ObjectOpenHashMap<>(diffMapping.size() + 1, 0.999999F); // Solar - load factor
         Object2IntMap<String> newIdenfierMap = MappingDataLoader.indexedObjectToMap(newMapping);
         Object2IntMap<String> oldIdenfierMap = MappingDataLoader.indexedObjectToMap(oldMapping);
         for (Map.Entry<String, JsonElement> entry : diffMapping.entrySet()) {

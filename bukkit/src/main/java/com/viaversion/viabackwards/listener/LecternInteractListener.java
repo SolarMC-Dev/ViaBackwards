@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package com.viaversion.viabackwards.listener;
-
+/* Solar - disable whole class
 import com.viaversion.viabackwards.BukkitPlugin;
 import com.viaversion.viabackwards.protocol.protocol1_13_2to1_14.Protocol1_13_2To1_14;
 import com.viaversion.viaversion.bukkit.listeners.ViaBukkitListener;
@@ -62,3 +62,4 @@ public class LecternInteractListener extends ViaBukkitListener {
         event.setCancelled(true);
     }
 }
+*/

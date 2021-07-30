@@ -29,10 +29,10 @@ import com.viaversion.viaversion.api.minecraft.metadata.MetaType;
 import com.viaversion.viaversion.api.minecraft.metadata.Metadata;
 import com.viaversion.viaversion.api.protocol.remapper.PacketHandler;
 import com.viaversion.viaversion.api.type.Type;
-import com.viaversion.viaversion.libs.fastutil.ints.Int2IntOpenHashMap;
-import com.viaversion.viaversion.libs.fastutil.ints.Int2ObjectMap;
-import com.viaversion.viaversion.libs.fastutil.ints.Int2ObjectOpenHashMap;
-import com.viaversion.viaversion.libs.gson.JsonElement;
+import it.unimi.dsi.fastutil.ints.Int2IntOpenHashMap;
+import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
+import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
+import com.google.gson.JsonElement;
 import com.viaversion.viaversion.protocols.protocol1_9_3to1_9_1_2.storage.ClientWorld;
 import com.viaversion.viaversion.rewriter.EntityRewriter;
 import com.viaversion.viaversion.rewriter.meta.MetaHandlerEvent;
@@ -147,7 +147,7 @@ public abstract class EntityRewriterBase<T extends BackwardsProtocol> extends En
     @Override
     public <E extends Enum<E> & EntityType> void mapTypes(EntityType[] oldTypes, Class<E> newTypeClass) {
         if (typeMappings == null) {
-            typeMappings = new Int2IntOpenHashMap(oldTypes.length, 1F);
+            typeMappings = new Int2IntOpenHashMap(oldTypes.length + 1, 0.999999F); // Solar - load factor
             typeMappings.defaultReturnValue(-1);
         }
         for (EntityType oldType : oldTypes) {

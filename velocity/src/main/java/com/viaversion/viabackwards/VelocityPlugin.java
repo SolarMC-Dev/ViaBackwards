@@ -28,7 +28,7 @@ import com.velocitypowered.api.plugin.annotation.DataDirectory;
 import com.viaversion.viabackwards.api.ViaBackwardsPlatform;
 import com.viaversion.viabackwards.utils.VersionInfo;
 import com.viaversion.viaversion.api.Via;
-import com.viaversion.viaversion.sponge.util.LoggerWrapper;
+//import com.viaversion.viaversion.sponge.util.LoggerWrapper; // Solar
 
 import java.io.File;
 import java.nio.file.Path;
@@ -52,7 +52,7 @@ public class VelocityPlugin implements ViaBackwardsPlatform {
     @Subscribe(order = PostOrder.LATE)
     public void onProxyStart(ProxyInitializeEvent e) {
         // Setup Logger
-        this.logger = new LoggerWrapper(loggerSlf4j);
+        this.logger = Logger.getLogger(getClass().getName()); // Solar
         Via.getManager().addEnableListener(() -> this.init(configPath.resolve("config.yml").toFile()));
     }
 

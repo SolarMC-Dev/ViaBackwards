@@ -20,10 +20,10 @@ package com.viaversion.viabackwards.protocol.protocol1_15_2to1_16.chat;
 import com.viaversion.viabackwards.ViaBackwards;
 import com.viaversion.viabackwards.api.BackwardsProtocol;
 import com.viaversion.viabackwards.api.rewriters.TranslatableRewriter;
-import com.viaversion.viaversion.libs.gson.JsonElement;
-import com.viaversion.viaversion.libs.gson.JsonObject;
-import com.viaversion.viaversion.libs.gson.JsonPrimitive;
-import com.viaversion.viaversion.libs.kyori.adventure.text.Component;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonPrimitive;
+import net.kyori.adventure.text.Component;
 import com.viaversion.viaversion.protocols.protocol1_13to1_12_2.ChatRewriter;
 
 public class TranslatableRewriter1_16 extends TranslatableRewriter {
